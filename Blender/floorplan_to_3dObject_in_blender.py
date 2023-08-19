@@ -145,6 +145,8 @@ def main(argv):
     if len(argv) > 7:  # Note YOU need 8 arguments!
         program_path = argv[5]
         target = argv[6]
+        print("Program Path:", program_path)
+        print("Target:", target)
     else:
         exit(0)
 
