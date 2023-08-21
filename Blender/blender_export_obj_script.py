@@ -17,6 +17,8 @@ if __name__ == "__main__":
     output_path = argv[
         5
     ]  # strict argc==5 -> len=6 will be used as argument see Reformat_blender_to_obj.py
+    print("Output Path in blender_export_obj_script:", output_path)
+
 
     bpy.ops.export_scene.obj(filepath=output_path)
 

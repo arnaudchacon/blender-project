@@ -20,6 +20,8 @@ if __name__ == "__main__":
     output_path = argv[
         7
     ]  # strict argc==5 -> len=6 will be used as argument see Reformat_blender_to_obj.py
+    print("Output Path in blender_export_any:", output_path)
+    print(f"Saving Blender file to: {output_path}")
 
     if format == ".obj":
         bpy.ops.export_scene.obj(filepath=output_path)

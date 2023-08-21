@@ -1,4 +1,6 @@
 import bpy
+import sys
+sys.path.append('/Applications/Blender.app/Contents/Resources/2.93/python/lib/python3.9/site-packages')
 import numpy as np
 import json
 import sys
@@ -35,6 +37,8 @@ Our helpful functions
 
 # TODO: restructure this file with a class and help-function to save a lot of lines of code!
 # TODO: fix index should be same as floorplan folder
+
+print("Starting the floorplan_to_3dObject_in_blender script...")
 
 
 def read_from_file(file_path):
@@ -154,9 +158,14 @@ def main(argv):
     Instantiate
     Each argument after 7 will be a floorplan path
     """
-    for i in range(7, len(argv)):
-        base_path = argv[i]
-        create_floorplan(base_path, program_path, i)
+    #for i in range(7, len(argv)):
+        #base_path = argv[i]
+        #create_floorplan(base_path, program_path, i)
+        
+        # After creating the floorplan, export the scene to an .obj file
+    #output_file_path = program_path + "output_3d_models/" + target + ".obj"
+    #bpy.ops.export_scene.obj(filepath=output_file_path)
+
 
     """
     Save to file
